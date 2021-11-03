@@ -1,0 +1,31 @@
+.hero {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background: url('../images/dist/hero-bg.png') center / cover no-repeat;
+    background-color: $black;
+    
+    &__img {
+        position: relative;
+    }
+
+    &__caption {
+        position: absolute;
+        right: -80px;
+        bottom: 188px;
+        color: $white;
+        font-size: 37px;
+        font-family: 'Raleway', sans-serif;
+    }
+
+    &__subtitle {
+        margin-bottom: 10px;
+    }
+
+    &__name {
+        font-weight: 700;
+        font-style: italic;
+        margin-left: 45px;
+    }
+}

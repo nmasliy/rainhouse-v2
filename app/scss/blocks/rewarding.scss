@@ -1,0 +1,77 @@
+.rewarding {
+    color: $white;
+    background: radial-gradient(ellipse at center,#201f1f 0,#000 55%);
+    background-color: $black;
+
+    &__inner {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    &__content {
+        width: 55%;
+    }
+
+    &__title {
+        margin-bottom: 40px;
+        max-width: 600px;
+    }
+
+    &__bar {
+        position: absolute;
+        left: 0;
+        top: 10px;
+        width: 9px;
+        height: 0;
+        background-color: $accent;
+        transition: 1s ease-in-out;
+
+        &.animated {
+            height: calc(100% - 16px);
+
+            &::after {
+                bottom: -3px;
+            }
+        }
+
+        &::before,
+        &::after {
+            position: absolute;
+            content: "";
+            height: 26px;
+            width: 26px;
+            left: -8px;
+            top: -3px;
+            border-radius: 50%;
+            background-color: $accent;
+            transition: 1s ease-in-out;
+        }
+
+        &::after {
+            bottom: -22px;
+            top: auto;
+        }
+    }
+
+    &__text {
+        position: relative;
+        padding-left: 30px;
+        p {
+            margin-bottom: 70px;
+            margin-top: 0;
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
+        strong {
+            font-family: "helveticaneuecyr-bold", sans-serif;
+            color: $accent;
+        }
+    }
+
+    &__img {
+        width: calc(45% - 30px);
+        margin-left: 30px;
+    }
+}

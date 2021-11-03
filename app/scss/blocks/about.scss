@@ -1,0 +1,22 @@
+.about {
+    background-color: $white;
+    &__inner {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    &__img {
+        margin-top: 90px;
+    }
+
+    &__content {
+        width: 57%;
+        margin-left: 20px;
+    }
+
+    &__title {
+        margin-bottom: 30px;
+    }
+
+}
