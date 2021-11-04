@@ -34,11 +34,13 @@ document.addEventListener("DOMContentLoaded", function () {
                         const pagination = document.querySelector('#pp-nav');
 
                         titles.forEach(title => {
-                            title.classList.add('animated');
+                            setTimeout(function(){
+                                title.classList.add('animated');
+                            }, 500)
         
                             setTimeout(function (){
                                 title.classList.remove('animated');
-                            }, 1100)
+                            }, 1500)
                         }) 
                             if (nextIndex === 1) {
                                 pagination.style.transition = '';
